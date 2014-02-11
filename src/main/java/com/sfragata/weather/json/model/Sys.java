@@ -5,6 +5,8 @@ package com.sfragata.weather.json.model;
 
 import java.io.Serializable;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 /**
  * @author frasi1
  * 
@@ -12,6 +14,7 @@ import java.io.Serializable;
  * 
  *         "sys":{"country":"CA","sunrise":1371113396,"sunset":1371170416}
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Sys implements Serializable {
 
 	private static final long serialVersionUID = -1519929139285862193L;
